@@ -1,8 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Sample Page</title>
+    <meta charset="UTF-8"/>
+    <title>app nodejs访问静态页面</title>
 </head>
 <body>
-Hello World!
+
+<form method="post" action="http://127.0.0.1:8124/biz" >
+    <input name="name" type="text" value="freddon" />
+    <input name="domain" type="text" value="http://www.sagosoft.com/"/>
+    <input type="submit" value="以POST提交" />
+</form>
+
+
+<form method="get" action="http://127.0.0.1:8124/biz" >
+    <input name="name" type="text" value="freddon" />
+    <input name="domain" type="text" value="http://www.sagosoft.com/"/>
+    <input type="submit" value="以GET提交" />
+</form>
+
 </body>
 </html>
