@@ -18,6 +18,57 @@
     <input name="domain" type="text" value="http://www.sagosoft.com/"/>
     <input type="submit" value="以GET提交" />
 </form>
+<script>
+	var game = function(str){
+		this.curStr = this.str = str.toLowerCase();
 
+
+
+
+
+
+	}
+	game.prototype = {
+		sortStr(str){
+			return str.split('').sort();
+		},
+		//字符串里面是否有重复的
+		checkRepeat(str){
+			var reg = /(\w)\w*\1/g;
+			return str.match(reg);
+		},
+		/**
+		*@param str1 未排序的字符串
+		*@param str2 排序后的字符串
+		*/
+		check(str1, str2){
+			var result = this.checkRepeat(str1);
+			if(result && result.length > 0){
+				return 1;	
+			}
+			if(str1 == str2){
+				return 2;
+			}
+			return 0;
+		}
+	}
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
